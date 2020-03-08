@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="SpringRestExample:war">
+    <output-path>$PROJECT_DIR$/../../apache-tomcat-9.0.30/webapps</output-path>
+    <properties id="ant-postprocessing">
+      <options enabled="true" />
+    </properties>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>SpringRestExample</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="SpringRestExample-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SpringRestExample:war exploded" />
+    </root>
+  </artifact>
+</component>

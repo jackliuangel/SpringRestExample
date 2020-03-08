@@ -1,0 +1,27 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Employee Management REST APIs</display-name>
+
+	<servlet>
+		<servlet-name>rest</servlet-name> 
+		<servlet-class>
+			org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<init-param>
+			<param-name>throwExceptionIfNoHandlerFound</param-name>
+			<param-value>true</param-value>
+		</init-param>
+<!--		deploy到webapp目录之后，tomcat启动的时候家在这个servlet！ 否则收到第一个restful请求的时候才加载！-->
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+<!--		定义了一个servlet 名为rest，处理/api/rest开头的url请求！-->
+		<servlet-name>rest</servlet-name>
+		<url-pattern>/api/rest/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>
